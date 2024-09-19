@@ -3,6 +3,31 @@
   width: 100px;
 }
 
-.github img {
+/* .dub img { 
+  width: 25px; 
+ right: 6%; 
+ position: fixed; 
+ top: 5%;
+} 
+*/
+
+.github_G img {
   width: 25px;
+  /* right: 3%; */
+  /* position: fixed; */
+  /* top: 5%; */
+}
+
+.github_M img {
+  width: 25px;
+  /* right: 3%; */
+  /* position: fixed; */
+  /* top: 10%; */
+}
+
+.github_A img {
+  width: 25px;
+  /* right: 3%; */
+  /* position: fixed; */
+  /* top: 15%; */
 }
