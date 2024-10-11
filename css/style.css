@@ -3,6 +3,48 @@
   width: 100px;
 }
 
+/* Codigo cabeçalho: */
+
+#logo img {
+  width: 65px;
+}
+
+#info {
+  position: fixed;
+  right: 0;
+  color: white;
+  text-align: center;
+}
+
+#nav a {
+  text-decoration: white;
+}
+
+#header {
+  box-sizing: border-box;
+  height: 100px;
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #e7e7e70c;
+  /* box-shadow: 3px 3px 6px #b1b1b1; Sombra do menu */
+  position: fixed;
+}
+
+/* Codigo cabeçalho. */
+
+/* Codigo da imagem de fundo: */
+
+#fundo img {
+  top: 0;
+  width: 100%;
+  position: static;
+}
+
+/* Codigo da imagem de fundo. */
+
 /* .dub img { 
   width: 25px; 
  right: 6%; 
@@ -11,12 +53,15 @@
 } 
 */
 
+/* Codigo de cada participante: */
+
 .github_G img {
   width: 25px;
   /* right: 3%; */
   /* position: fixed; */
   /* top: 5%; */
 }
+
 .youtube_ico img {
   width: 25px;
 }
@@ -35,6 +80,12 @@
   /* top: 15%; */
 }
 
+/* Codigo de cada participante. */
+
+/* Codigo do icone de contatos: */
+
 .Contatos img {
   width: 25px;
 }
+
+/* Codigo do icone de contatos. */
