@@ -16,11 +16,91 @@
   text-align: center;
 }
 
-#nav a {
+/* #nav a {
   text-decoration: white;
+} */
+
+/* Inicio estilo header */
+/* Centralizando itens menu */
+nav {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
 }
 
 #header {
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  box-sizing: border-box;
+  height: 80px;
+  padding: 1rem;
+  display: flex;
+  background: rgba(26, 26, 26, 1);
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.item-menu {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  gap: 0.8rem;
+  padding: 0;
+  margin: auto;
+}
+
+.item-menu a {
+  color: rgb(218, 218, 218);
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  display: block;
+  padding: 0 0.4em;
+  font-size: 15px;
+}
+
+.item-menu a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+/* Fim estilo menu */
+
+/* Começo estilo logo */
+#logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo {
+  position: absolute;
+  left: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+#logo img {
+  height: 75px;
+}
+
+.logo-text {
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 22px;
+  color: white;
+  margin-left: 10px;
+  white-space: nowrap;
+}
+/* Fim estilo logo */
+
+/* #header {
   box-sizing: border-box;
   height: 100px;
   width: 100%;
@@ -30,8 +110,8 @@
   justify-content: space-between;
   background: #e7e7e70c;
   /* box-shadow: 3px 3px 6px #b1b1b1; Sombra do menu */
-  position: fixed;
-}
+/* position: fixed; */
+/* }
 
 /* Codigo cabeçalho. */
 
