@@ -1,29 +1,33 @@
 <p align="center">
-<img src="./assets/img/logo.png" width="500"/>
+<img src="./assets/img/logo.png" width="300"/>
 </p>
 
-# Blue-Screen - Free Energy
+# 🌲 Free Energy
 
-# Descrição:
+**Um projeto que incentiva o uso de árvores como fonte de energia renovável.**
 
-FreeEnergy é um website que propõe o uso de árvores como fonte de energia renovável.
+# 🌍 Descrição:
 
-# Objetivos:
+-   Free Energy é um projeto que propõe o uso de árvores como fonte de energia renovável. Este website explora a captura da energia gerada pelo movimento das árvores, como a oscilação de suas folhas ao vento. Ao empregar tecnologias sustentáveis, buscamos transformar esse movimento natural em energia elétrica, oferecendo uma alternativa ambiental e visualmente harmônica com o ambiente ao nosso redor. Nosso objetivo é fornecer uma solução viável para a geração de energia elétrica e conscientizar a sociedade sobre a relevância de preservar o meio ambiente ao usá-lo de forma inteligente.
 
--   Incentivar o desenvolvimento de uma tecnologia que gere energia atraves do moviemnto das arvores.
--   Conscientizar que existe uma maneira de gerar energia renovavel atraves das arvores sem ferir o meio ambiente e seu visual.
+# 💡 Objetivos:
 
-# Tecnologias aplicadas:
+-   Incentivar o desenvolvimento de uma tecnologia que gere energia atraves do movimento das arvores.
+-   Conscientizar que existe uma maneira de gerar energia renovável atraves das arvores sem ferir o meio ambiente e seu visual.
+
+# 💻 Tecnologias aplicadas:
 
 ![HTML](https://img.shields.io/badge/HTML-%23E44D26?style=for-the-badge&logo=html5&logoColor=white) ![CSS](https://img.shields.io/badge/CSS-%231572B6?style=for-the-badge&logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-%23F7DF1E?style=for-the-badge&logo=javascript&logoColor=black) ![VSCode](https://img.shields.io/badge/VSCode-%23007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 
-# Integrantes:
+# 👨🏻‍💻 Integrantes:
 
 -   **Gustavo Galdino Alexandre Cavalcante RA - 237052.**
 -   **Gustavo Medeiros Barros dos Santos RA - 234858.**
 -   **Neemias Aguiar de Mello RA - 237321.**
 
-# Changelog:
+# 🛠️ Changelog:
+
+-   Free Energy V.0.1.6 Atualização README e Saiba mais.
 
 -   Free Energy V.0.1.5 Debugando As imagens do Saiba mais uma vez.
 
