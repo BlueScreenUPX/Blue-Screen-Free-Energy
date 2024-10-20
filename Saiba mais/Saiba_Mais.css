@@ -395,8 +395,9 @@ iframe {
 }
 .imagem-floresta {
     width: 100%;
-    max-width: 1263px;
-    height: 600px;
+    max-width: 100%;
+    max-height: 80vh;
+    height: auto;
     position: relative;
     margin: 0 auto;
     overflow: hidden;
@@ -415,10 +416,9 @@ iframe {
 
 .imagem-floresta img {
     width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
+    height: auto;
+    position: relative;
+    overflow: hidden;
     z-index: 1;
 }
 /* Fim uso */
