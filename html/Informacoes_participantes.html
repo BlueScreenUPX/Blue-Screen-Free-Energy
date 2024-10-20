@@ -3,46 +3,79 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style_global.css" />
     <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/Informacoes_participantes.css" />
     <title>Info dos participantes</title>
   </head>
 
   <!-- Caracter : significa inicio de um codigo/assunto e . para finalizar o codigo/assunto -->
 
   <body>
-    <!-- Codigo dos integrantes e seus links: -->
-    Informações complementares dos integrantes do projeto:
-    <!-- Codigo Informações do Gustavo Galdino: -->
-    <p>
-      Gustavo Galdino Alexandre Cavalcante RA - 237052.
-      <a class="github_G" href="https://github.com/gudaloco" target="_blank"
-        ><img src="../img/github_logo.png" alt="imagem github" />
-      </a>
-      <a
-        class="youtube_ico"
-        href="https://www.youtube.com/@gudaloco"
-        target="_blank"
-      >
-        <img src="../img/Youtube_logo.png" alt="icone youtube"
-      /></a>
-      <!-- Codigo Informações do Gustavo Galdino. -->
+    <!-- Codigo cabeçalho: -->
+    <header id="header">
+      <div class="logo">
+        <a id="logo" href="./home.html">
+          <img src="../assets/img/logo.png" alt="Logo Free Energy" />
+          <span class="logo-text">FREE ENERGY</span>
+        </a>
+      </div>
 
-      <!-- Codigo Informações do Gustavo Medeiros: -->
-      <br />
-      Gustavo Medeiros Barros dos Santos RA - 234858.
-      <a class="github_M" href="" target="_blank"
-        ><img src="../img/github_logo.png" alt="imagem github"
-      /></a>
-      <!-- Codigo Informações do Gustavo Medeiros. -->
+      <!-- Opções menu: -->
+      <nav>
+        <ul class="item-menu">
+          <li><a class="itens-menu" href="./index.html">Home</a></li>
+          <li><a class="itens-menu" href="./index.html">|</a></li>
+          <li><a class="itens-menu" href="../Saiba mais/Saiba_Mais.html">Saiba Mais</a></li>
+          <li><a class="itens-menu" href="./home.html">|</a></li>
+          <li><a class="itens-menu" href="./noticias">Notícias</a></li>
+          <li><a class="itens-menu" href="./home.html">|</a></li>
+          <li><a class="itens-menu" href="../html/Informacoes_participantes.html">Contato</a></li>
+        </ul>
+      </nav>
+      <!-- Opções menu. -->
+    </header>
+    <!-- Codigo cabeçalho. -->
 
-      <!-- Codigo Informações do Neemias Aguiar: -->
-      <br />
-      Neemias Aguiar de Mello RA - 237321.
-      <a class="github_A" href="" target="_blank"
-        ><img src="../img/github_logo.png" alt="imagem github"
-      /></a>
-      <!-- Codigo Informações do Neemias Aguiar. -->
-      <!-- Codigo dos integrantes e seus links. -->
-    </p>
+    <div class="fade-in">
+      <!-- Codigo dos integrantes e seus links: -->
+
+      <!-- Codigo Informações do Gustavo Galdino: -->
+      <section class="Integrantes">
+        <div class="Container">
+          <div class="Cards">
+            <h2>Informações complementares dos integrantes do projeto:</h2>
+            <div class="Card">
+              <ul>
+                <h3>Gustavo Galdino Alexandre Cavalcante RA - 237052.</h3>
+                <a class="github_G" href="https://github.com/gudaloco" target="_blank"
+                  ><img src="../img/github_logo.png" alt="imagem github" />Github</a
+                >
+                <a class="youtube_ico" href="https://www.youtube.com/@gudaloco" target="_blank">
+                  <img src="../img/Youtube_logo.png" alt="icone youtube" />YouTube</a
+                >
+              </ul>
+            </div>
+            <!-- Codigo Informações do Gustavo Galdino. -->
+
+            <!-- Codigo Informações do Gustavo Medeiros: -->
+            <div class="Card">
+              Gustavo Medeiros Barros dos Santos RA - 234858.
+              <a class="github_M" href="" target="_blank"><img src="../img/github_logo.png" alt="imagem github" /></a>
+            </div>
+            <!-- Codigo Informações do Gustavo Medeiros. -->
+
+            <!-- Codigo Informações do Neemias Aguiar: -->
+            <div class="Card">
+              Neemias Aguiar de Mello RA - 237321.
+              <a class="github_A" href="" target="_blank"><img src="../img/github_logo.png" alt="imagem github" /></a>
+            </div>
+            <!-- Codigo Informações do Neemias Aguiar. -->
+            <!-- Codigo dos integrantes e seus links. -->
+          </div>
+        </div>
+      </section>
+    </div>
+    <script src="../JavaScript/Informacoes_participantes.js"></script>
   </body>
 </html>

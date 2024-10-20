@@ -3,11 +3,82 @@
   width: 100px;
 }
 
+/* Configuração de estilo geral da pagina: */
+/* Estilo das Fontes: */
+h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 3.2rem;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+p {
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+.integrantes {
+  font-family: "Lato", sans-serif;
+}
+/* Estilo das Fontes. */
+
+/* Codigo de imagens em geral: */
+.Imagem {
+  padding-bottom: 15px;
+}
+/* Codigo de imagens em geral. */
+
+/* Animação da pagina inteira: */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Animação da pagina inteira. */
+
+body {
+  background-color: var(--bg-color);
+}
+/* Configuração de estilo geral da pagina. */
+
 /* Codigo cabeçalho: */
+/* Estilo logo: */
+#logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo {
+  position: absolute;
+  left: 1rem;
+  display: flex;
+  align-items: center;
+}
 
 #logo img {
-  width: 65px;
+  height: 75px;
 }
+
+.logo-text {
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 22px;
+  color: white;
+  margin-left: 10px;
+  white-space: nowrap;
+}
+/* estilo logo. */
 
 #info {
   position: fixed;
@@ -15,10 +86,7 @@
   color: white;
   text-align: center;
 }
-
-/* #nav a {
-  text-decoration: white;
-} */
+/* Codigo cabeçalho. */
 
 /* Inicio estilo header */
 /* Centralizando itens menu */
@@ -67,56 +135,10 @@ nav {
   color: white;
   text-decoration: underline;
 }
-
 /* Fim estilo menu */
-
-/* Começo estilo logo */
-#logo {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-}
-
-.logo {
-  position: absolute;
-  left: 1rem;
-  display: flex;
-  align-items: center;
-}
-
-#logo img {
-  height: 75px;
-}
-
-.logo-text {
-  text-decoration: none;
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 22px;
-  color: white;
-  margin-left: 10px;
-  white-space: nowrap;
-}
-/* Fim estilo logo */
-
-/* #header {
-  box-sizing: border-box;
-  height: 100px;
-  width: 100%;
-  padding: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: #e7e7e70c;
-  /* box-shadow: 3px 3px 6px #b1b1b1; Sombra do menu */
-/* position: fixed; */
-/* }
-
 /* Codigo cabeçalho. */
 
 /* Codigo da imagem de fundo: */
-
 #fundo img {
   top: 0;
   width: 100%;
@@ -124,14 +146,6 @@ nav {
 }
 
 /* Codigo da imagem de fundo. */
-
-/* .dub img { 
-  width: 25px; 
- right: 6%; 
- position: fixed; 
- top: 5%;
-} 
-*/
 
 /* Codigo de cada participante: */
 
