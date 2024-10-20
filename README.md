@@ -25,6 +25,8 @@ FreeEnergy é um website que propõe o uso de árvores como fonte de energia ren
 
 # Changelog:
 
+-   Free Energy V.0.0.10 Pagina saiba mais concluida.
+
 -   Free Energy V.0.0.9 Atualização logo do README.
 
 -   Free Energy V.0.0.8 Atualização do README.

@@ -14,12 +14,6 @@ html{
     transform: translateY(0);
 }
 
-.separa{
-    margin-bottom: 20px;
-    margin-top: 20px;
-    border: none;
-    height: 2px;
-}
 
 /* Inicio estilo header */
 /* Centralizando itens menu */
@@ -60,6 +54,17 @@ nav {
     font-weight: 400;
     font-style: normal;
     text-align: center;
+    display: block;
+    padding: 0 0.4em;
+    font-size: 15px;
+}
+
+.item-menu p {
+    color: white;
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     display: block;
     padding: 0 0.4em;
     font-size: 15px;
@@ -240,6 +245,7 @@ body{
 .beneficios-energia {
     padding: 70px 0;
     /* background-color: var(--bg-color); */
+
 }
 
 .beneficios-container {
@@ -290,7 +296,7 @@ body{
     font-weight: 100;
     font-style: normal;
     color: black;
-    font-size: 16px;
+    font-size: 1.2rem;
     line-height: 1.5;
 }
 /* Fim estilo - Beneficios */
@@ -301,22 +307,8 @@ body{
     padding: 0;
 }
 
-.background-como-fazer {
-    width: 100%;
-    color: white; 
-    background: var(--verde-escuro);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    margin: 0 auto;
-    position: relative;
-}
-
-
 .como-fazer{
-    color: white;
+    color: black;
     display: flex;
     justify-content: center;
     align-items: center; 
@@ -332,7 +324,7 @@ body{
  .como-fazer-text a {
     font-family: 'Roboto', sans-serif;
     text-decoration: none;
-    color: white;
+    color: black;
     font-size: 2rem;
  }
 
@@ -348,7 +340,61 @@ body{
     margin-bottom: 20px;
 }
 
-.floresta {
+
+.video-explicativo {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+iframe {
+    width: 100%;
+    border-radius: 20px;
+    position: relative;
+    z-index: 2;
+}
+/* Fim estilo - Como fazer isto */
+
+/* Inicio uso */
+.uso-text {
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column;
+}
+
+.uso-text h2 {
+    font-family: "Roboto", sans-serif;
+    font-size: 3.2rem;
+    color: white;
+    text-align: center;
+}
+
+.uso-text p {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.2rem;
+    color: white;
+    line-height: 1.5;
+    max-width: 800px;
+    text-align: left;
+}
+
+.background-uso {
+    width: 100%;
+    color: white; 
+    background: var(--verde-escuro);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 0 auto;
+    position: relative;
+}
+.imagem-floresta {
     width: 100vw;
     max-width: 1263px;
     height: 600px;
@@ -357,30 +403,26 @@ body{
     overflow: hidden;
 }
 
-.floresta img {
+.imagem-floresta::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--verde-escuro) 0%, rgba(34, 139, 34, 0) 50%);
+    z-index: 2; /* Fica sobre a imagem */
+}
+
+.imagem-floresta img {
     width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 1;
+    z-index: 1; /* A imagem está abaixo do gradiente */
 }
-
-.video-explicativo {
-    position: relative;
-    z-index: 2;
-}
-
-iframe {
-    width: 100%;
-    height: auto;
-    max-width: 560px;
-    border-radius: 20px;
-    overflow: hidden;
-    position: relative;
-    z-index: 2;
-}
-/* Fim estilo - Como fazer isto */
+/* Fim uso */
 
 /* Inicio rodape */
 .rodape {
