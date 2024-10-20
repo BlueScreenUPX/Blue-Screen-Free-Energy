@@ -141,8 +141,8 @@ nav {
 /* Codigo da imagem de fundo: */
 #fundo img {
   top: 0;
-  width: 100%;
-  position: static;
+  width: max-content;
+  position: fixed;
 }
 
 /* Codigo da imagem de fundo. */
