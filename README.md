@@ -1,5 +1,5 @@
 <p align="center">
-<img src="./views/assets/img/logo" width="500"/>
+<img src="./assets/img/logo.png" width="500"/>
 </p>
 
 # Blue-Screen - Free Energy
@@ -24,6 +24,8 @@ FreeEnergy é um website que propõe o uso de árvores como fonte de energia ren
 -   **Neemias Aguiar de Mello RA - 237321.**
 
 # Changelog:
+
+-   Free Energy V.0.0.9 Atualização logo do README.
 
 -   Free Energy V.0.0.8 Atualização do README.
 
