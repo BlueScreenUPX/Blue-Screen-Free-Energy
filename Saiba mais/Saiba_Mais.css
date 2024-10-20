@@ -393,14 +393,13 @@ iframe {
     margin: 0 auto;
     position: relative;
 }
+
 .imagem-floresta {
     width: 100%;
-    max-width: 100%;
-    max-height: 80vh;
-    height: auto;
+    height: 50vh;
     position: relative;
-    margin: 0 auto;
     overflow: hidden;
+    z-index: 1;
 }
 
 .imagem-floresta::before {
@@ -416,21 +415,22 @@ iframe {
 
 .imagem-floresta img {
     width: 100%;
+    left: 0;
+    top: 0;
     height: auto;
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
+    z-index: -1;
 }
 /* Fim uso */
 
 /* Inicio rodape */
 .rodape {
-    position: absolute;
+    position: relative;
     background-color: var(--menu-background);
     color: white;
     width: 100%; 
     font-size: 14px;
     font-family: "Roboto", sans-serif;
+    z-index: 10;
 }
 
 .rodape a {
