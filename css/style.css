@@ -17,6 +17,7 @@ p {
   font-family: "Lato", sans-serif;
   font-size: 16px;
   text-align: center;
+  padding-top: 15px;
   padding-bottom: 15px;
 }
 
@@ -26,9 +27,31 @@ p {
 /* Estilo das Fontes. */
 
 /* Codigo de imagens em geral: */
-.Imagem {
+.Imagem img {
+  width: 100%;
+  top: 0;
+  left: 0;
   padding-bottom: 15px;
+  position: relative;
+  display: inline-block;
 }
+/* Código para o Texto ficar na imagem: */
+.titulo {
+  top: 0;
+  right: 0;
+  position: absolute;
+  color: white;
+}
+
+.Texto-img {
+  top: 100px;
+  right: 100px;
+  position: absolute;
+  padding-top: 100px;
+  color: white;
+}
+
+/* Código para o Texto ficar na imagem. */
 /* Codigo de imagens em geral. */
 
 /* Animação da pagina inteira: */
@@ -179,7 +202,12 @@ nav {
 /* Codigo do icone de contatos: */
 
 .Contatos img {
-  width: 25px;
+  width: 250px;
+}
+
+.Contatos {
+  display: flex;
+  justify-content: center;
 }
 
 /* Codigo do icone de contatos. */

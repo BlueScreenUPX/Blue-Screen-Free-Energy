@@ -27,6 +27,8 @@
 
 # 🛠️ Changelog:
 
+-   Free Energy V.0.1.7 Debugando os caminho dos links e os cards da pagina Contatos, atualizando a pagina Home, Contatos e adicionando a pagina noticias.
+
 -   Free Energy V.0.1.6 Atualização README e Saiba mais.
 
 -   Free Energy V.0.1.5 Debugando As imagens do Saiba mais uma vez.
