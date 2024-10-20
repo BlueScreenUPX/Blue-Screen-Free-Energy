@@ -61,7 +61,6 @@ nav {
 
 .item-menu p {
     color: white;
-    text-decoration: none;
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -395,11 +394,11 @@ iframe {
     position: relative;
 }
 .imagem-floresta {
-    width: 100vw;
+    width: 100%;
     max-width: 1263px;
     height: 600px;
     position: relative;
-    margin-bottom: 0;
+    margin: 0 auto;
     overflow: hidden;
 }
 
@@ -411,7 +410,7 @@ iframe {
     width: 100%;
     height: 100%;
     background: linear-gradient(to bottom, var(--verde-escuro) 0%, rgba(34, 139, 34, 0) 50%);
-    z-index: 2; /* Fica sobre a imagem */
+    z-index: 2;
 }
 
 .imagem-floresta img {
@@ -420,7 +419,7 @@ iframe {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 1; /* A imagem está abaixo do gradiente */
+    z-index: 1;
 }
 /* Fim uso */
 
