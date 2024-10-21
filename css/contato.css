@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--bg-color);
+  color: black;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 120px;
+}
+
+.contact-form {
+  width: 400px;
+  text-align: center;
+}
+
+.contact-form h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  padding: 12px 20px;
+  background-color: #ff9900;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #cc7a00;
+}
+
+.social-media {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.social-media h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.social-media a {
+  display: inline-flex;
+  align-items: center;
+  margin: 0 15px;
+  text-decoration: none;
+  color: #333;
+}
+
+.social-media a img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.social-media a span {
+  font-size: 1.2rem;
+}
+
+.Integrantes {
+  padding: 0px 0;
+}
+
+.Integrantes h2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 3.2rem;
+  padding-top: 10px;
+}
+
+.Container {
+  padding: 70px;
+  max-width: 1500px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.Cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.Card {
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px;
+  width: 300px;
+  text-align: center;
+  border-radius: 25px;
+}
+
+.Card h3 {
+  font-family: "Roboto", sans-serif;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.Card p {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+}
+
+.Card a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  text-decoration: none;
+  color: black;
+}
+
+.Card a img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
