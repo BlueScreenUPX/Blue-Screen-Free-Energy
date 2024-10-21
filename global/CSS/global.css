@@ -1,0 +1,19 @@
+/* Codigos de fontes de titulos: */
+.fonte-titulo {
+    font-family: "Roboto", sans-serif;
+    font-size: 3.2rem;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+/* Codigos de fontes de titulos. */
+
+/* Codigos de fontes de texto: */
+.fonte-texto {
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+/* Codigos de fontes de texto. */
