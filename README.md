@@ -27,7 +27,9 @@
 
 # 🛠️ Changelog:
 
--   Free Energy V.0.1.8 Atualizações gerais do projeto como a organização das paginas e seu css e alguns debugs.
+-   Free Energy V.0.1.9 Atualizações gerais do projeto como a organização das paginas e seu css e alguns debugs.
+
+-   Free Energy V.0.1.8 Adicionando a Pasta Global para adicionar configurações que serão usadas em todas as paginas, adicionando Global.Css para o codigo da fonte, Adicionando tambem o JavaScript global para para a animação das paginas, excluindo os JavaScripts individuais desnecessarios, Excluindo a pasta img e movendo as imagens para assets/img.
 
 -   Free Energy V.0.1.7 Debugando os caminho dos links e os cards da pagina Contatos, atualizando a pagina Home, Contatos e adicionando a pagina noticias.
 
