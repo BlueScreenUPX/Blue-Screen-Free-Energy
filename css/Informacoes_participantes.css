@@ -17,7 +17,7 @@
   text-align: center;
 }
 
-.cards {
+.Cards {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;

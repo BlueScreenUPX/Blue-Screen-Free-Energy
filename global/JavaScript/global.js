@@ -1,4 +1,4 @@
-// Animação aparecendo
+// Animação aparecendo:
 document.addEventListener("DOMContentLoaded", function () {
     const elements = document.querySelectorAll('.fade-in');
 
@@ -15,3 +15,4 @@ document.addEventListener("DOMContentLoaded", function () {
         observer.observe(element);
     });
 });
+// Animação aparecendo.
