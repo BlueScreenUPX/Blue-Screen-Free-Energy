@@ -27,11 +27,7 @@
 
 # 🛠️ Changelog:
 
-<<<<<<< HEAD
--   Free Energy V.0.2.1 Debugando o projeto que ficou coisas diferentes em cada PC
-=======
--   Free Energy V.0.1.9 Atualizações gerais do projeto como a organização das paginas e seu css e alguns debugs.
->>>>>>> 0050668a1c7a82e61b098ea4fcffb8b2ff817e99
+-   Free Energy V.0.1.9 Debugando o projeto que ficou coisas diferentes em cada PC E PELO AMOR DE DEUS GUSTAVO AVISA ANTES QUE TEM UM BUG.
 
 -   Free Energy V.0.1.8 Adicionando a Pasta Global para adicionar configurações que serão usadas em todas as paginas, adicionando Global.Css para o codigo da fonte, Adicionando tambem o JavaScript global para para a animação das paginas, excluindo os JavaScripts individuais desnecessarios, Excluindo a pasta img e movendo as imagens para assets/img.
 

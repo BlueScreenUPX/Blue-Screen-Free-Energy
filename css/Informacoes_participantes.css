@@ -1,40 +1,41 @@
+/* CSS Da pagina Contatos */
 .Integrantes {
-  padding: 70px 0;
+    padding: 70px 0;
 }
 
 .Integrantes h2 {
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 3.2rem;
-  text-transform: uppercase;
-  padding-top: 10px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 3.2rem;
+    text-transform: uppercase;
+    padding-top: 10px;
 }
 
 .Container {
-  max-width: 1200px;
-  margin: 0 auto;
-  text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .Cards {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .Card {
-  background-color: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  margin: 20px;
-  width: 300px;
-  text-align: center;
-  border-radius: 25px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+    width: 300px;
+    text-align: center;
+    border-radius: 25px;
 }
 
 .card h3 {
-  font-family: "Roboto", sans-serif;
-  color: black;
-  margin-bottom: 10px;
+    font-family: "Roboto", sans-serif;
+    color: black;
+    margin-bottom: 10px;
 }
