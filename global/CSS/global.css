@@ -18,10 +18,36 @@
 }
 /* Codigos de fontes de texto. */
 
-.fonte-texto2 {
+.fonte-link {
     font-family: "Roboto", sans-serif;
-    font-size: 3.2rem;
+    font-size: 25px;
     text-align: center;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container1 {
+    width: 60%;
+    background-color: black;
+    border-radius: 25px;
+    border: 10px solid black;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    margin: auto;
+}
+
+.caixa1 {
+    width: 60%;
+    box-sizing: border-box;
+}
+
+.gif {
+    display: flex;
+    justify-content: center;
 }
