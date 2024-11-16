@@ -27,6 +27,8 @@
 
 # 🛠️ Changelog:
 
+-   Free Energy V.0.2.2 Começando a ajustar conforme o novo tema concedido ao projeto.
+
 -   Free Energy V.0.2.1 Reorganizando a pagina Home (Ainda falta por o gif do video).
 
 -   Free Energy V.0.2.0 Adiconando um Gif(Place Holder) do video completo do projeto e um link para chegar automaticamente neste video.
