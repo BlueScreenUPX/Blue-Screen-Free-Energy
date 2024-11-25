@@ -1,0 +1,19 @@
+.form-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+.form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.cadastro {
+    width: 100%;
+    margin-left: 50px;
+    padding: 20px;
+    background-color: #f0f4f7;
+    position: relative; /* Evita sobreposição */
+  }

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <title>Free Energy Dashboard</title>
+        <link rel="stylesheet" href="../css/style_dashboard.css" />
+        <link rel="stylesheet" href="../css/bootstrap.min.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+            integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+            crossorigin="anonymous"
+        />
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
+            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+            crossorigin="anonymous"
+        ></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <link
+            rel="shortcut icon"
+            href="/img/logo.ico"
+            type="image/x-icon"
+        />
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                // Seleciona todos os links "Inserir Leituras"
+                const toggleButtons = document.querySelectorAll('.toggle-devices');
+                
+                toggleButtons.forEach(button => {
+                    button.addEventListener('click', function() {
+                        // Encontra o submenu correspondente
+                        const subMenu = button.nextElementSibling;
+                        
+                        // Alterna a visibilidade do submenu
+                        if (subMenu.style.display === 'none' || subMenu.style.display === '') {
+                            subMenu.style.display = 'block';
+                        } else {
+                            subMenu.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div class="container-sidebar">
+            <!-- Menu Lateral -->
+            <aside class="sidebar">
+                <h5>Bem-vindo, <%= nome %>!</h5>
+                <ul>
+                    <li><a href="/dashboard">Dashboard</a></li>
+                    <li><a href="#">Dispositivos</a></li>
+                    <% devices.forEach(device => { %>
+                        <li>
+                            <a href="javascript:void(0)" class="toggle-devices">
+                                Inserir Leituras - <%= device.device.nome_dispositivo %>
+                            </a>
+                            <ul class="sub-menu" style="display: none;">
+                                <% devices.forEach(d => { %>
+                                    <li>
+                                        <a href="/inserir-leitura/<%= d.device.id_dispositivo %>">
+                                            <%= d.device.nome_dispositivo %>
+                                        </a>
+                                    </li>
+                                <% }) %>
+                            </ul>
+                        </li>
+                    <% }) %>
+                </ul>
+                <a href="/logout" class="btn btn-danger w-100 mt-4"
+                    >Logout</a
+                >
+                <a href="/cadastrar-dispositivo"><button id="add-device">+ Novo Dispositivo</button></a>
+            </aside>
+            <!-- Conteúdo Principal -->
+            <main class="dashboard">
+                <header>
+                    <h2>Dashboard</h2>
+                    <div class="filters">
+                        <form action="/dashboard" method="GET">
+                            <select id="device-type" name="deviceType">
+                                <option value="all" <% if (!devices.length) { %> selected <% } %>>Todos os Dispositivos</option>
+                                <option value="solar" <% if (deviceType === 'solar') { %> selected <% } %>>Solar</option>
+                                <option value="wind" <% if (deviceType === 'wind') { %> selected <% } %>>Eólico</option>
+                            </select>
+                            <button type="submit" class="btn btn-primary">Filtrar</button>
+                        </form>
+                    </div>
+                </header>
+
+                <section class="device-list">
+                    <% if (devices.length) { %>
+                        <ul>
+                            <% devices.forEach(device => { %>
+                                <div class="container-cards">
+                                    <div class="cards-relatorio">
+                                        <div class="card-relatorio">
+                                            <p>Dispositivos Ativos: <%= activeDevices %></p>
+                                        </div>
+                                        <div class="card-relatorio">
+                                            <p>Energia produzida: <%= device.energy %></p>
+                                        </div>
+                                        <div class="card-relatorio">
+                                            <p>Consumidos: <%= device.consumed %></p>
+                                        </div>
+                                        <div class="card-relatorio">
+                                            <p>Desempenho: <%= device.performance %></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            <% }) %>
+                        </ul>
+                    <% } else { %>
+                        <p>Nenhum dispositivo cadastrado. Clique no botão abaixo para adicionar um.</p>
+                        <a href="/cadastrar-dispositivo" class="btn btn-success">+ Adicionar Dispositivo</a>
+                    <% } %>
+                </section>
+            
+
+
+                <section class="charts">
+                    <% devices.forEach(device => { %>
+                        <% if (device.device && device.device.id_dispositivo) { %>
+                            <div class="chart-container">
+                                <!-- Gráfico de Produção -->
+                                <canvas 
+                                    id="chart-production-<%= device.device.id_dispositivo %>" 
+                                    data-device='<%- JSON.stringify({
+                                        data: device.data?.map(d => ({
+                                            date: d.date ? new Date(d.date).toLocaleDateString() : null,
+                                            energia_produzida: d.energia_produzida,
+                                        }))
+                                    }) %>'>
+                                </canvas>
+                            </div>
+                            <div class="chart-container">
+                                <!-- Gráfico de Consumo -->
+                                <canvas 
+                                    id="chart-consumption-<%= device.device.id_dispositivo %>" 
+                                    data-device='<%- JSON.stringify({
+                                        data: device.data?.map(d => ({
+                                            date: d.date ? new Date(d.date).toLocaleDateString() : null,
+                                            energia_consumida: d.energia_consumida,
+                                        }))
+                                    }) %>'>
+                                </canvas>
+                            </div>
+                            
+                            <script>
+                                document.addEventListener('DOMContentLoaded', function() {
+                                    <%- devices.forEach(device => { %>
+                                        renderCharts(<%= device.device.id_dispositivo %>);
+                                    <% }) %>
+                                });
+                            
+                                async function renderCharts(deviceId) {
+                                    const canvasProduction = document.getElementById('chart-production-' + deviceId);
+                                    const deviceDataProduction = JSON.parse(canvasProduction.dataset.device);
+                                    const ctxProduction = canvasProduction.getContext('2d');
+                                    const chartDataProduction = {
+                                        labels: deviceDataProduction.data.map(d => d.date),
+                                        datasets: [{
+                                            label: 'Energia Produzida (kWh)',
+                                            data: deviceDataProduction.data.map(d => d.energia_produzida),
+                                            borderColor: 'green',
+                                            fill: false,
+                                        }]
+                                    };
+                            
+                                    const canvasConsumption = document.getElementById('chart-consumption-' + deviceId);
+                                    const deviceDataConsumption = JSON.parse(canvasConsumption.dataset.device);
+                                    const ctxConsumption = canvasConsumption.getContext('2d');
+                                    const chartDataConsumption = {
+                                        labels: deviceDataConsumption.data.map(d => d.date),
+                                        datasets: [{
+                                            label: 'Energia Consumida (kWh)',
+                                            data: deviceDataConsumption.data.map(d => d.energia_consumida),
+                                            borderColor: 'red',
+                                            fill: false,
+                                        }]
+                                    };
+                            
+                                    const forecastData = await fetch(`/api/estimativa/${deviceId}`)
+                                        .then(response => response.json())
+                                        .catch(error => console.error('Erro ao obter estimativas climáticas:', error));
+                            
+                                    const estimatedProduction = forecastData.map(forecast => forecast.solarRadiation * 0.1); // Ajuste conforme necessário
+                                    const estimatedConsumption = forecastData.map(forecast => forecast.solarRadiation * 0.05); // Ajuste conforme necessário
+                            
+                                    chartDataProduction.datasets.push({
+                                        label: 'Estimativa Produção (kWh)',
+                                        data: estimatedProduction,
+                                        borderColor: 'blue',
+                                        borderDash: [5, 5], // Linha tracejada
+                                        fill: false,
+                                    });
+                            
+                                    chartDataConsumption.datasets.push({
+                                        label: 'Estimativa Consumo (kWh)',
+                                        data: estimatedConsumption,
+                                        borderColor: 'orange',
+                                        borderDash: [5, 5], // Linha tracejada
+                                        fill: false,
+                                    });
+                            
+                                    new Chart(ctxProduction, {
+                                        type: 'line',
+                                        data: chartDataProduction,
+                                    });
+                            
+                                    new Chart(ctxConsumption, {
+                                        type: 'line',
+                                        data: chartDataConsumption,
+                                    });
+                                }
+                            </script>
+                        <% } else { %>
+                            <p>Dados do dispositivo não disponíveis.</p>
+                        <% } %>
+                    <% }) %>
+            
+                
+
+                <!-- Gráficos -->
+                <!-- <section class="charts">
+                    <div class="chart-container">
+                        <canvas id="efficiencyChart"></canvas>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="prevChart"></canvas>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="timeLossChart"></canvas>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="economyChart"></canvas>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="roiChart"></canvas>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="performanceChart"></canvas>
+                    </div>
+                </section> -->
+            </main>
+        </div>
+
+        <footer></footer>
+
+        <script
+            src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"
+            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"
+        ></script>
+        <script src="/js/bootstrap-min.js"></script>
+        <script src="../javascript/dashboard-script.js"></script>
+    </body>
+</html>

@@ -27,6 +27,8 @@
 
 # 🛠️ Changelog:
 
+-   Free Energy V.0.2.3 Projeto quase finalizado, adicionada a lading page as paginas de login e do sistema com um pequeno bug.
+
 -   Free Energy V.0.2.2 Começando a ajustar conforme o novo tema concedido ao projeto.
 
 -   Free Energy V.0.2.1 Reorganizando a pagina Home (Ainda falta por o gif do video).

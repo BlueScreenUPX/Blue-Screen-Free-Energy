@@ -1,0 +1,26 @@
+<form action="/inserir-leitura" method="POST">
+    <input
+        type="hidden"
+        name="id_dispositivo"
+        value="<%= dispositivo.id_dispositivo %>"
+    />
+    <div>
+        <label>Energia Produzida (kWh):</label>
+        <input
+            type="number"
+            name="energia_produzida"
+            step="0.01"
+            required
+        />
+    </div>
+    <div>
+        <label>Energia Consumida (kWh):</label>
+        <input
+            type="number"
+            name="energia_consumida"
+            step="0.01"
+            required
+        />
+    </div>
+    <button type="submit">Salvar Leitura</button>
+</form>
