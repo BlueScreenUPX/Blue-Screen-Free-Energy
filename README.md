@@ -26,6 +26,8 @@
 
 # 🛠️ Changelog:
 
+-   Free Energy V.0.2.6 Vercel file.
+
 -   Free Energy V.0.2.5 Começando a dar deploy.
 
 -   Free Energy V.0.2.4 Projeto finalizado.

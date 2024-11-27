@@ -1,10 +1,9 @@
 const express = require('express');
 const app = express();
-const port = process.env.PORT || 3000;
+const port =3000;
 const bodyparser = require('body-parser');
 const bcrypt = require('bcrypt');
-const mysql = require('mysql');
-const connection = mysql.createConnection(process.env.CLEARDB_DATABASE_URL) || require('./database/connection');
+const connection = require('./database/connection');
 const usuarios = require('./database/usuarios');
 const dispositivos = require('./database/dispositivos');
 const leituras = require('./database/leituras');
