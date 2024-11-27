@@ -26,6 +26,8 @@
 
 # 🛠️ Changelog:
 
+-   Free Energy V.0.2.7 Package file.
+
 -   Free Energy V.0.2.6 Vercel file.
 
 -   Free Energy V.0.2.5 Começando a dar deploy.
