@@ -1,31 +1,33 @@
 <p align="center">
-<img src="./assets/img/logo.png" width="300"/>
+<img src="./public/img/logo.png" width="300"/>
+
 </p>
 
-# 🌲 Free Energy
+# 🗐 Free Energy
 
-**Um projeto que incentiva o uso de árvores como fonte de energia renovável.**
+**MONITORAMENTO DE ENERGIAS RENOVÁVEIS: SOLUÇÃO PARA GESTÃO EFICIENTE DE FONTES SUSTENTÁVEIS**
 
 # 🌍 Descrição:
 
--   Free Energy é um projeto que propõe o uso de árvores como fonte de energia renovável. Este website explora a captura da energia gerada pelo movimento das árvores, como a oscilação de suas folhas ao vento. Ao empregar tecnologias sustentáveis, buscamos transformar esse movimento natural em energia elétrica, oferecendo uma alternativa ambiental e visualmente harmônica com o ambiente ao nosso redor. Nosso objetivo é fornecer uma solução viável para a geração de energia elétrica e conscientizar a sociedade sobre a relevância de preservar o meio ambiente ao usá-lo de forma inteligente.
+-   Free Energy é um projeto que se propoe a solucionar o problema de gerenciar adequadamente e com eficacia os dados de geradores de energias renovaveis, como gerador eolico e paineis solares. O projeto oferece um sistema interativo e objetivo com os dados sobre os geradores que os usuarios cadastrarem no sistema e insera leituras de seus geradores no sistema, uma vez com esses dados free energy oferecera um dashboard com graficos de produção, consumo, eficacia, velocidade do vento, nivel de erradiação solar e estimativas dos dados de produção e consumo.
 
 # 💡 Objetivos:
 
--   Incentivar o desenvolvimento de uma tecnologia que gere energia atraves do movimento das arvores.
--   Conscientizar que existe uma maneira de gerar energia renovável atraves das arvores sem ferir o meio ambiente e seu visual.
+-   Ajudar e auxiliar donos de geradores com fontes de energias renovaveis a gerenciar de maneira inteligente os seus geradores.
+-   Incentivar por meio dos resultados obtidos a incentivar as pessoas terem geradores de energias renovaveis.
 
 # 💻 Tecnologias aplicadas:
 
-![HTML](https://img.shields.io/badge/HTML-%23E44D26?style=for-the-badge&logo=html5&logoColor=white) ![CSS](https://img.shields.io/badge/CSS-%231572B6?style=for-the-badge&logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-%23F7DF1E?style=for-the-badge&logo=javascript&logoColor=black) ![VSCode](https://img.shields.io/badge/VSCode-%23007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
+![HTML](https://img.shields.io/badge/HTML-%23E44D26?style=for-the-badge&logo=html5&logoColor=white) ![CSS](https://img.shields.io/badge/CSS-%231572B6?style=for-the-badge&logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-%23F7DF1E?style=for-the-badge&logo=javascript&logoColor=black) ![VSCode](https://img.shields.io/badge/VSCode-%23007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white) ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white) ![Bootstrap](https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white) ![Chart.js](https://img.shields.io/badge/chart.js-F5788D.svg?style=for-the-badge&logo=chart.js&logoColor=white) ![MySQL](https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white) ![EJS](https://img.shields.io/badge/ejs-%23B4CA65.svg?style=for-the-badge&logo=ejs&logoColor=black) ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB) ![Sequelize](https://img.shields.io/badge/Sequelize-52B0E7?style=for-the-badge&logo=Sequelize&logoColor=white)
 
 # 👨🏻‍💻 Integrantes:
 
 -   **Gustavo Galdino Alexandre Cavalcante RA - 237052.**
 -   **Gustavo Medeiros Barros dos Santos RA - 234858.**
--   **Neemias Aguiar de Mello RA - 237321.**
 
 # 🛠️ Changelog:
+
+-   Free Energy V.0.2.4 Projeto finalizado.
 
 -   Free Energy V.0.2.3 Projeto quase finalizado, adicionada a lading page as paginas de login e do sistema com um pequeno bug.
 
@@ -35,7 +37,7 @@
 
 -   Free Energy V.0.2.0 Adiconando um Gif(Place Holder) do video completo do projeto e um link para chegar automaticamente neste video.
 
--   Free Energy V.0.1.9 Debugando o projeto que ficou coisas diferentes em cada PC E PELO AMOR DE DEUS GUSTAVO AVISA ANTES QUE TEM UM BUG.
+-   Free Energy V.0.1.9 Debugando o projeto que ficou coisas diferentes em cada pc.
 
 -   Free Energy V.0.1.8 Adicionando a Pasta Global para adicionar configurações que serão usadas em todas as paginas, adicionando Global.Css para o codigo da fonte, Adicionando tambem o JavaScript global para para a animação das paginas, excluindo os JavaScripts individuais desnecessarios, Excluindo a pasta img e movendo as imagens para assets/img.
 

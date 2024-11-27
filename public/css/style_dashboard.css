@@ -1,137 +1,62 @@
-/* style_dashboard.css */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
-
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   min-height: 100vh;
   background: linear-gradient(90deg, rgb(248, 248, 248), rgb(235, 255, 235));
+  margin: 0;
+  padding: 0;
 }
-  
-.container-sidebar {
-    display: flex;
-    width: 100%;
-}
-  
+
 .sidebar {
-  position: fixed; /* Fixar a sidebar */
-  top: 0; /* Alinhar ao topo */
-  left: 0; /* Alinhar à esquerda */
-  background-color: #007f4f;
-  color: white;
-  width: 250px;
-  height: 100vh; /* Ocupa toda a altura da tela */
+  position: fixed; /* Fixa o menu na tela */
+  top: 0;
+  left: 0;
+  background-color: seagreen;
+  min-height: 100vh; /* Garante que o menu ocupe toda a altura da tela */
   padding: 20px;
+  width: 250px; /* Defina uma largura para o menu */
+  z-index: 1000; /* Certifique-se de que o menu esteja acima de outros elementos */
+}
+
+.sidebar .nav-link {
+  color: white;
+}
+
+.sidebar .nav-link:hover {
+  background-color: rgba(255,255,255,0.1);
+}
+
+.main-content {
+  margin-left: 250px; /* Espaço suficiente para o menu fixo */
+  padding: 20px;
+  transition: margin-left 0.3s ease; /* Transição suave para o menu responsivo */
+}
+
+@media (max-width: 767.98px) {
+  .sidebar {
+      left: -100%; /* Esconde o menu */
+      width: 280px; /* Largura do menu no modo responsivo */
+  }
+  
+  .sidebar.show {
+      left: 0; /* Mostra o menu */
+  }
+  
+  .main-content {
+      margin-left: 0; /* Remove a margem em telas pequenas */
+  }
+}
+
+/* Força todos os cards a terem a mesma altura */
+.card {
   display: flex;
-  flex-direction: column;
-  overflow-y: auto; /* Adiciona rolagem se necessário */
-  z-index: 1000; /* Garantir que a sidebar fique acima do conteúdo */
-}
-  
-  .sidebar h1 {
-    text-align: center;
-    font-size: 32px;
-    margin-bottom: 20px;
-  }
-
-  .sidebar img {
-    width: 100px;
-  }
-  
-  .sidebar ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .sidebar ul li {
-    margin: 15px 0;
-  }
-  
-  .sidebar ul li a {
-    text-decoration: none;
-    color: white;
-    font-size: 16px;
-  }
-  
-  .sidebar button {
-    margin-top: auto;
-    padding: 10px;
-    background-color: #009b6d;
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    border-radius: 5px;
-    margin-bottom: 20px;
-  }
-  
-  .dashboard {
-    width: 100%;
-    margin-left: 250px; /* Deixa o espaço para a sidebar */
-    padding: 20px;
-    background-color: #f0f4f7;
-    position: relative; /* Evita sobreposição */
-  }
-
-  .container-cards {
-    color: white;
-    /* padding: 50px; */
-    max-width: 100%;
-    margin: 0 auto;
-    text-align: left;
-  }
-
-  .cards-relatorio {
-    display: flex;
-    justify-content: center;
-    align-items: wrap;
-  }
-
-  .card-relatorio {
-    background:seagreen;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 5px;
-    margin: 10px;
-    width: 150px;
-    text-align: center;
-    border-radius: 25px ;
-  }
-  
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .charts {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    margin-top: 20px;
-    
-  }
-  
-  .chart-container {
-    background: white;
-    padding: 15px;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-
-  .sub-menu {
-    list-style-type: none;
-    margin: 0;
-    padding-left: 20px;
+  flex-direction: column; /* Garante que o conteúdo do card se alinhe verticalmente */
+  justify-content: space-between; /* Distribui o espaço interno */
+  height: 100%; /* Todos os cards terão a mesma altura */
+  min-height: 130px; /* Ajuste de acordo com a sua necessidade */
 }
 
-.sub-menu li {
-    margin-bottom: 5px;
+/* Garante que os textos não forcem alturas diferentes */
+.card-title, .card-text {
+  margin: 0; /* Remove margens desnecessárias */
+  text-align: center; /* Alinha o conteúdo */
+  word-wrap: break-word; /* Quebra de palavras longas */
 }

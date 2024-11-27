@@ -56,18 +56,18 @@ app.get('/page/dashboard', async (req, res) => {
     }
 
     try {
+        const deviceType = req.query.deviceType || 'all';
+        let whereClause = { id_usuario: req.session.usuarioId };
+        
+        if (deviceType !== 'all') {
+            whereClause.tipo_dispositivo = deviceType;
+        }
+
         const devices = await dispositivos.findAll({
-            where: { id_usuario: req.session.usuarioId },
+            where: whereClause,
         });
 
-        const deviceType = req.query.deviceType || 'all'; // Obter o tipo de dispositivo do filtro (se disponível)
-
-        // Inicializar métricas
-        let totalDevices = devices.length;
         let activeDevices = 0;
-        let totalEnergyProduced = 0;
-        let totalEnergyConsumed = 0;
-
         const deviceMetrics = await Promise.all(
             devices.map(async (device) => {
                 const readings = await leituras.findAll({
@@ -86,28 +86,29 @@ app.get('/page/dashboard', async (req, res) => {
                     ? ((energyProduced - energyConsumed) / energyProduced) * 100
                     : 0;
         
-                    return {
-                        device: {
-                            id_dispositivo: device.id_dispositivo || null,
-                            nome_dispositivo: device.nome_dispositivo || "Dispositivo sem nome",
-                            tipo_dispositivo: device.tipo_dispositivo || "Desconhecido",
-                        },
-                        data: readings.map((reading) => ({
-                            date: reading.data_leitura,
-                            energia_produzida: reading.energia_produzida,
-                            energia_consumida: reading.energia_consumida,
-                        })),
-                        energy: energyProduced.toFixed(2),
-                        consumed: energyConsumed.toFixed(2),
-                        performance: performance.toFixed(2),
-                    };
+                if (device.status_dispositivo === 'ativo') {
+                    activeDevices++;
+                }
+
+                return {
+                    device: {
+                        id_dispositivo: device.id_dispositivo,
+                        nome_dispositivo: device.nome_dispositivo,
+                        tipo_dispositivo: device.tipo_dispositivo,
+                    },
+                    energy: energyProduced.toFixed(2),
+                    consumed: energyConsumed.toFixed(2),
+                    performance: performance.toFixed(2),
+                };
             })
         );
+        
+
         res.render('page/dashboard', {
             nome: req.session.nome,
             devices: deviceMetrics,
-            deviceType, // Tipo de dispositivo para o filtro
-            activeDevices, // Total de dispositivos ativos
+            deviceType,
+            activeDevices,
         });
     } catch (error) {
         console.error('Erro ao carregar o dashboard:', error);
@@ -115,39 +116,6 @@ app.get('/page/dashboard', async (req, res) => {
     }
 });
 
-app.get('/api/estimativa/:id', async (req, res) => {
-    const { id } = req.params;
-
-    const dispositivo = await dispositivos.findByPk(id);
-    if (!dispositivo) {
-        return res.status(404).send('Dispositivo não encontrado.');
-    }
-
-    // Coordenadas do dispositivo (exemplo fixo)
-    const latitude = -23.5505; // Substitua pela latitude do dispositivo
-    const longitude = -46.6333; // Substitua pela longitude do dispositivo
-
-    try {
-        const weatherResponse = await axios.get(`https://api.openweathermap.org/data/2.5/forecast`, {
-            params: {
-                lat: latitude,
-                lon: longitude,
-                appid: '75ed360115daebfaab9591d500b6f2df',
-                units: 'metric',
-            },
-        });
-
-        const forecast = weatherResponse.data.list.map(f => ({
-            date: f.dt_txt,
-            solarRadiation: f.clouds.all, // Nível de cobertura de nuvens (proxy para estimar radiação solar)
-        }));
-
-        res.json(forecast);
-    } catch (error) {
-        console.error('Erro ao obter estimativas climáticas:', error);
-        res.status(500).send('Erro ao obter estimativas climáticas.');
-    }
-});
 
 // Rota para cadastrar um dispositivo
 app.post('/cadastrar-dispositivo', (req, res) => {
@@ -267,20 +235,30 @@ app.get('/logout', (req, res) => {
 });
 
 // Página para inserir leituras
-app.get('/inserir-leitura/:id', (req, res) => {
+app.get('/inserir-leitura/:id', async (req, res) => {
     if (!req.session.usuarioId) {
         return res.redirect('/login');
     }
 
-    dispositivos.findByPk(req.params.id).then(dispositivo => {
+    try {
+        const dispositivo = await dispositivos.findByPk(req.params.id);
+
         if (!dispositivo || dispositivo.id_usuario !== req.session.usuarioId) {
             return res.status(403).send('Dispositivo não encontrado ou não pertence ao usuário.');
         }
 
-        res.render('page/inserir-leitura', { dispositivo });
-    }).catch(error => {
+        const devices = await dispositivos.findAll({
+            where: { id_usuario: req.session.usuarioId },
+        });
+
+        res.render('page/inserir-leitura', { 
+            nome: req.session.nome,
+            dispositivo,
+            devices, // Adicionando devices ao contexto
+        });
+    } catch (error) {
         res.status(500).send("Erro ao carregar a página de leituras: " + error);
-    });
+    }
 });
 
 // Processar o envio de leituras

@@ -84,15 +84,10 @@ body {
 }
 
 /* Cabeçalho */
-.footer-1{
-  width: 100%;
-  height: 70px;
-  background: #333;
-  text-align: center;
-  padding: 20px;
+.footer-color {
+  background: #1a1a1a !important;
 }
 
-.footer-1 h5 a {
-  color: white;
-  text-decoration: none;
+.footer-text {
+  color: white !important;
 }
