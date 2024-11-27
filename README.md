@@ -1,6 +1,5 @@
 <p align="center">
 <img src="./public/img/logo.png" width="300"/>
-
 </p>
 
 # 🗐 Free Energy
@@ -26,6 +25,8 @@
 -   **Gustavo Medeiros Barros dos Santos RA - 234858.**
 
 # 🛠️ Changelog:
+
+-   Free Energy V.0.2.5 Começando a dar deploy.
 
 -   Free Energy V.0.2.4 Projeto finalizado.
 

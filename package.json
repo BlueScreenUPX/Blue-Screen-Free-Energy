@@ -4,7 +4,8 @@
   "description": "Projeto free energy",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "author": "Gustavo Medeiros Barros dos Santos",
   "license": "ISC",
@@ -17,5 +18,9 @@
     "express-session": "^1.18.1",
     "mysql2": "^3.11.4",
     "sequelize": "^6.37.5"
+  },
+  "engines": {
+    "node": "14.x",
+    "npm": "6.x"
   }
 }
