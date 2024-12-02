@@ -39,43 +39,48 @@ Essas informações permitem aos usuários otimizar a utilização de seus gerad
 ### Pré-requisitos:
 
 Certifique-se de ter as ferramentas a seguir instaladas em sua máquina:
-'''
+
+```
 Node.js (versão 16 ou superior)
 MySQL (instância local ou em nuvem)
 Navegador atualizado (Google Chrome, Firefox, etc.)
-'''
+```
 
 ### Passos para Executar:
 
 1. Clone o Repositório:
-   '''
-   git clone https://github.com/usuario/free-energy.git
-   '''
+
+    ```
+    git clone https://github.com/usuario/free-energy.git
+    ```
+
 2. Instale as Dependências:
-   '''
-   cd free-energy  
-   npm install  
-   '''
+
+    ```
+    cd free-energy
+    npm install
+    ```
 
 3. Configure as credenciais do MySQL.
 
-'''
+```
 database/connection.js
-Insira os dados da sua conexão MySQL]
-'''
+Insira os dados da sua conexão MySQL
+```
 
 4. Inicie o Servidor:
-   '''
-   node app.js  
-   O sistema estará acessível no endereço: http://localhost:3000.
-   '''
+
+    ```
+    node app.js
+    O sistema estará acessível no endereço: http://localhost:3000.
+    ```
 
 5. Acesse o Sistema:
 
-'''
+```
 Abra o navegador e acesse http://localhost:3000.
 Realize o cadastro, registre seus geradores e comece a monitorar seus dados!
-'''
+```
 
 # 👨🏻‍💻 Integrantes:
 
@@ -83,6 +88,8 @@ Realize o cadastro, registre seus geradores e comece a monitorar seus dados!
 -   **Gustavo Medeiros Barros dos Santos RA - 234858.**
 
 # 🛠️ Changelog:
+
+-   Free Energy V.0.3.0 Atualização README.
 
 -   Free Energy V.0.2.9 Atualização README.
 
