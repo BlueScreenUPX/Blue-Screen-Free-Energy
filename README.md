@@ -54,7 +54,25 @@ Navegador atualizado (Google Chrome, Firefox, etc.)
 git clone https://github.com/usuario/free-energy.git
 ```
 
+```
+git clone https://github.com/usuario/free-energy.git
+```
+
+```
+git clone https://github.com/usuario/free-energy.git
+```
+
 2. Instale as Dependências:
+
+```
+cd free-energy
+npm install
+```
+
+```
+cd free-energy
+npm install
+```
 
 ```
 cd free-energy
@@ -69,6 +87,16 @@ Insira os dados da sua conexão MySQL
 ```
 
 4. Inicie o Servidor:
+
+```
+node app.js
+O sistema estará acessível no endereço: http://localhost:3000.
+```
+
+```
+node app.js
+O sistema estará acessível no endereço: http://localhost:3000.
+```
 
 ```
 node app.js
