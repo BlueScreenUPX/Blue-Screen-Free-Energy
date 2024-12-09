@@ -50,16 +50,16 @@ Navegador atualizado (Google Chrome, Firefox, etc.)
 
 1. Clone o Repositório:
 
-    ```
-    git clone https://github.com/usuario/free-energy.git
-    ```
+```
+git clone https://github.com/usuario/free-energy.git
+```
 
 2. Instale as Dependências:
 
-    ```
-    cd free-energy
-    npm install
-    ```
+```
+cd free-energy
+npm install
+```
 
 3. Configure as credenciais do MySQL.
 
@@ -70,10 +70,10 @@ Insira os dados da sua conexão MySQL
 
 4. Inicie o Servidor:
 
-    ```
-    node app.js
-    O sistema estará acessível no endereço: http://localhost:3000.
-    ```
+```
+node app.js
+O sistema estará acessível no endereço: http://localhost:3000.
+```
 
 5. Acesse o Sistema:
 
@@ -88,6 +88,8 @@ Realize o cadastro, registre seus geradores e comece a monitorar seus dados!
 -   **Gustavo Medeiros Barros dos Santos RA - 234858.**
 
 # 🛠️ Changelog:
+
+-   Free Energy V.0.3.1 Atualização nos graficos e README.
 
 -   Free Energy V.0.3.0 Atualização README.
 

@@ -14,6 +14,7 @@ const axios = require('axios');
 app.use(bodyparser.urlencoded({ extended: false }));
 app.use(bodyparser.json());
 
+
 // Configuração do middleware para sessões
 app.use(session({
     secret: 'a', // Substituir por uma string mais segura em produção
@@ -53,7 +54,10 @@ app.get('/page/dashboard', async (req, res) => {
 
         let activeDevices = 0;
         const deviceMetrics = await Promise.all(devices.map(async (device) => {
-            const readings = await leituras.findAll({ where: { id_dispositivo: device.id_dispositivo } });
+            const readings = await leituras.findAll({ 
+                where: { id_dispositivo: device.id_dispositivo },
+                order: [['timestamp', 'ASC']]
+            });
             let energyProduced = 0, energyConsumed = 0;
 
             readings.forEach(reading => {
@@ -76,6 +80,11 @@ app.get('/page/dashboard', async (req, res) => {
                 energy: energyProduced.toFixed(2),
                 consumed: energyConsumed.toFixed(2),
                 performance: performance.toFixed(2),
+                readings: readings.map(r => ({
+                    timestamp: r.timestamp,
+                    energia_produzida: r.energia_produzida,
+                    energia_consumida: r.energia_consumida
+                }))
             };
         }));
 
@@ -129,6 +138,7 @@ app.get('/cadastrar-dispositivo', (req, res) => {
         })
         .catch(error => res.send("Erro ao carregar página: " + error));
 });
+
 
 // Cadastro de usuário
 app.post('/cadastro-user', (req, res) => {
